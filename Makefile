@@ -1361,6 +1361,7 @@ headers: $(version_h) scripts_unifdef uapi-asm-generic archheaders archscripts
 	  $(error Headers not exportable for the $(SRCARCH) architecture))
 	$(Q)$(MAKE) $(hdr-inst)=include/uapi
 	$(Q)$(MAKE) $(hdr-inst)=arch/$(SRCARCH)/include/uapi
+	$(Q)$(MAKE) $(hdr-inst)=techpack/audio/include/uapi dst=techpack/audio/include
 	$(Q)for d in $(techpack-dirs); do \
 		$(MAKE) $(hdr-inst)=$$d/include/uapi; \
 	done
