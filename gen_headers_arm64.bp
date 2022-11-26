@@ -863,6 +863,7 @@ gen_headers_out_arm64 = [
     "linux/netfilter_ipv4/ipt_ah.h",
     "linux/netfilter_ipv4/ipt_ecn.h",
     "linux/netfilter_ipv4/ipt_ttl.h",
+    "linux/netfilter_ipv4/ipt_TRIGGER.h",
     "linux/netfilter_ipv6/ip6_tables.h",
     "linux/netfilter_ipv6/ip6t_HL.h",
     "linux/netfilter_ipv6/ip6t_LOG.h",
@@ -1075,3 +1076,4 @@ genrule {
         "--include_uapi $(locations include/uapi/**/*.h)",
     out: ["linux/version.h"] + gen_headers_out_arm64,
 }
+
