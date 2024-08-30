@@ -9548,6 +9548,13 @@ deinit:
 	return ret;
 }
 
+#ifndef ENABLE_WSA
+static struct snd_soc_codec_conf msm_codec_conf[] = {
+	{ "cs35l41.3-0040", NULL, "L" },
+	{ "cs35l41.3-0041", NULL, "R" },
+};
+#endif
+
 static int msm_asoc_machine_probe(struct platform_device *pdev)
 {
 	struct snd_soc_card *card = NULL;
